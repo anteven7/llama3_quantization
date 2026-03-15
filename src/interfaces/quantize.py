@@ -13,13 +13,6 @@ class QuantizerInterface(ABC):
     def quantize(self) -> None:
         """
         Aplica el algoritmo de cuantización al modelo.
-        
-        Args:
-            model (nn.Module): Modelo base instanciado en PyTorch/Transformers.
-            kwargs: Parámetros específicos del algoritmo.
-            
-        Returns:
-            nn.Module: El modelo con los pesos cuantizados.
         """
         pass
 
@@ -28,10 +21,6 @@ class QuantizerInterface(ABC):
         """
         Guarda el modelo cuantizado en disco utilizando el formato compatible
         con el algoritmo subyacente.
-        
-        Args:
-            model (nn.Module): El modelo previamente cuantizado.
-            output_path (Union[str, Path]): Ruta destino del archivo/directorio.
         """
         pass
 
